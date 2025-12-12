@@ -1,5 +1,7 @@
 # Advent of Code 2025
 
+![Banner](Advent%20of%20Code.png)
+
 The advent of code programming puzzles advent calendar
 
 ## How to use

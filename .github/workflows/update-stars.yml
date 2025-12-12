@@ -1,7 +1,8 @@
 name: Update README Stars
 on:
-  schedule:
-    - cron: "18 5 * 12,1 *"  # Every day at 6:51 AM
+  # schedule:
+    # - cron: "18 5 * 12,1 *"  # Every day at 6:51 AM
+  push:
   workflow_dispatch:
 
 jobs:
@@ -17,6 +18,6 @@ jobs:
           leaderboardId: 972845
           year: 2025
           sessionCookie: ${{ secrets.AOC_SESSION }}
-      - uses: stefanzweifel/git-auto-commit-action@v5 # use v5
+      - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update README stars

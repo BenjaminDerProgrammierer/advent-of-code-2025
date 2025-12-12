@@ -4,8 +4,8 @@ The advent of code programming puzzles advent calendar
 
 ## How to use
 
-* Create a data folder structure `data -> dayXX -> dayXX[.test].in`
-* Run with: `npx tsx ./src/dayXX/partXX.ts`
+* Create an `.aoc_session` file with your session cookie or set the `AOC_SESSION` environment variable, then run `npm run fetch-input` to get your inputs.
+* Run with: `npx tsx ./src/dayXX/partXX.ts` or run `npm run solve-all`
 
 <!--- advent_readme_stars table --->
 ## 2025 Results

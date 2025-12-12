@@ -1,3 +1,5 @@
-data
+data/day*/day*.in
+!data/day*/day*.test.in
 node_modules
 package-lock.json
+.aoc_session

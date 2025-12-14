@@ -64,7 +64,7 @@ async function fetchDayInput(day: number) {
         return false;
     }
 
-    const text = await res.text()
+    const text = (await res.text()).trim();
 
     const outDir = path.join(process.cwd(), 'data', `day${pad(day)}`)
     await fs.mkdir(outDir, { recursive: true })

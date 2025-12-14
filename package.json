@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "",
-    "fetch-input": "tsx scripts/fetch-input.ts"
+    "fetch-input": "tsx scripts/fetch-input.ts",
+    "solve-all": "tsx scripts/solve-all.ts"
   },
   "keywords": [],
   "author": "",

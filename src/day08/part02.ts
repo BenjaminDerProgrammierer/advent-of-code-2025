@@ -60,7 +60,7 @@ while (true) {
     break;
   }
 
-  console.log("Number of circuits:", circuits.length, processedPairs.size);
+  // console.log("Number of circuits:", circuits.length, processedPairs.size);
 }
 
 const result = connectedXCoordinates.at(-1)! * connectedXCoordinates.at(-2)!;

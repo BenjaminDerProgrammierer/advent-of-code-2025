@@ -59,7 +59,7 @@ async function getInput(year: number, day: number) {
   }
   else {
     // fetch from app
-    const filePath = `/test-inputs/${year}/day${String(day).padStart(2, '0')}.test.in`;
+    const filePath = `${import.meta.env.BASE_URL}test-inputs/${year}/day${String(day).padStart(2, '0')}.test.in`;
 
     return fetch(filePath)
       .then(response => {

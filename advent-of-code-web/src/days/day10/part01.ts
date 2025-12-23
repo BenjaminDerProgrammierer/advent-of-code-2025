@@ -1,11 +1,10 @@
+type Machine = {
+  lights: boolean[];
+  buttonWiring: number[][];
+  joltageRequirement: number[];
+}
+
 export default (input: string): number => {
-
-  type Machine = {
-    lights: boolean[];
-    buttonWiring: number[][];
-    joltageRequirement: number[];
-  }
-
   const machines: Machine[] = input.split("\n").map((l) => {
     return {
       lights: l.split("[")[1].split("]")[0].split("").map(ch => ch === "#"),

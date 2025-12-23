@@ -4,9 +4,9 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "start": "",
     "fetch-input": "tsx scripts/fetch-input.ts",
-    "solve-all": "tsx scripts/solve-all.ts"
+    "solve-all": "tsx scripts/solve-all.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",

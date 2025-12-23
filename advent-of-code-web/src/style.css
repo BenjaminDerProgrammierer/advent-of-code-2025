@@ -1,0 +1,74 @@
+#console-output {
+    height: 400px;
+    margin: 0;
+    margin-top: 0;
+    padding: 30px;
+    border: black 5px solid;
+    border-top: none;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    overflow: auto;
+    background-color: #000;
+    background-image: radial-gradient(rgba(0, 150, 0, 0.75), #000 120%);
+    color: #fff;
+    font: 1.3rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #c8c8c8;
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: rgba(0, 77, 0, 0.75);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgb(0, 138, 0);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .number {
+        color: #00ca98;
+    }
+
+    .boolean {
+        color: #ca2800;
+    }
+
+    .undefined {
+        color: #c300ca;
+    }
+
+    .error {
+        color: #ff0000;
+    }
+
+    .warn {
+        color: #eeff00;
+    }
+
+    ::before {
+        content: "";
+        position: absolute;
+        height: 465px;
+        width: var(--aocfw-width);
+        transform: translateX(-32px) translateY(-32px);
+        background: repeating-linear-gradient(0deg,
+                rgba(0, 0, 0, 0.15),
+                rgba(0, 0, 0, 0.15) 1px,
+                transparent 1px,
+                transparent 2px);
+        pointer-events: none;
+    }
+
+    ::selection {
+        background: #0080ff;
+        text-shadow: none;
+    }
+}

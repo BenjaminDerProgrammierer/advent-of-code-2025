@@ -34,13 +34,95 @@ clearBtn.addEventListener('click', () => {
 
 async function run(year: number, day: number, part: number) {
   console.log(`Running year: ${year}, day: ${day}, part: ${part}`);
-  const filePath = `./days/day${String(day).padStart(2, '0')}/part${String(part).padStart(2, '0')}.ts`; // Default export is (input): output there.
   const input = await getInput(year, day);
 
   let output: null | number = null;
   try {
-    /* @vite-ignore */
-    const runDay = await import(filePath);
+    let runDay;
+    if (year == 2025) {
+      if (day == 1) {
+        if (part == 1) {
+          runDay = await import(`./days/day01/part01.ts`);
+        } else {
+          runDay = await import(`./days/day01/part02.ts`);
+        }
+      } else if (day == 2) {
+        if (part == 1) {
+          runDay = await import(`./days/day02/part01.ts`);
+        } else {
+          runDay = await import(`./days/day02/part02.ts`);
+        }
+      } else if (day == 3) {
+        if (part == 1) {
+          runDay = await import(`./days/day03/part01.ts`);
+        } else {
+          throw new Error("Not implemented");
+          // runDay = await import(`./days/day03/part02.ts`);
+        }
+      } else if (day == 4) {
+        if (part == 1) {
+          runDay = await import(`./days/day04/part01.ts`);
+        } else {
+          runDay = await import(`./days/day04/part02.ts`);
+        }
+      } else if (day == 5) {
+        if (part == 1) {
+          runDay = await import(`./days/day05/part01.ts`);
+        } else {
+          runDay = await import(`./days/day05/part02.ts`);
+        }
+      } else if (day == 6) {
+        if (part == 1) {
+          runDay = await import(`./days/day06/part01.ts`);
+        } else {
+          runDay = await import(`./days/day06/part02.ts`);
+        }
+      } else if (day == 7) {
+        if (part == 1) {
+          runDay = await import(`./days/day07/part01.ts`);
+        } else {
+          runDay = await import(`./days/day07/part02.ts`);
+        }
+      } else if (day == 8) {
+        if (part == 1) {
+          runDay = await import(`./days/day08/part01.ts`);
+        } else {
+          runDay = await import(`./days/day08/part02.ts`);
+        }
+      } else if (day == 9) {
+        if (part == 1) {
+          runDay = await import(`./days/day09/part01.ts`);
+        } else {
+          throw new Error("Not implemented");
+          // runDay = await import(`./days/day09/part02.ts`);
+        }
+      } else if (day == 10) {
+        if (part == 1) {
+          runDay = await import(`./days/day10/part01.ts`);
+        } else {
+          throw new Error("Not implemented");
+          // runDay = await import(`./days/day10/part02.ts`);
+        }
+      } else if (day == 11) {
+        if (part == 1) {
+          runDay = await import(`./days/day11/part01.ts`);
+        } else {
+          throw new Error("Not implemented");
+          // runDay = await import(`./days/day11/part02.ts`);
+        }
+      } else if (day == 12) {
+        if (part == 1) {
+          throw new Error("Not implemented");
+          // runDay = await import(`./days/day12/part01.ts`);
+        } else {
+          throw new Error("Not implemented");
+          // runDay = await import(`./days/day12/part02.ts`);
+        }
+      }
+    }
+    if (!runDay) {
+      throw new Error("Day doesn't exist");
+    }
     output = runDay.default(input);
   } catch (error: any) {
     console.error("Error running the specified day:", error.message);
